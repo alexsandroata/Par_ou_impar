@@ -1,8 +1,77 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Par ou Ímpar dos Crias</title>
-</head>
+	<head>
+		<title>Par ou Ímpar dos Crias</title>
+		<style>
+			body {
+				background-color: #151B24;
+				color: #C6C6C6;
+				font-family: 'Arial', sans-serif;
+				margin: 0;
+				padding: 0;
+			}
+	
+			h1 {
+				background-color: #262B33;
+				border: 1px solid #000;
+				font-size: 2em;
+				margin: 10px;
+				padding: 10px;
+				text-align: center;
+				width: 60%;
+				margin-left: 20%;
+			}
+	
+			p {
+				font-size: 1.2em;
+				margin: 10px;
+				padding: 10px;
+				text-align: center;
+				width: 60%;
+				margin-left: 20%;
+			}
+	
+			form {
+				background-color: #262B33;
+				border: 1px solid #000;
+				font-size: 1.2em;
+				margin: 10px;
+				padding: 10px;
+				text-align: center;
+				width: 60%;
+				margin-left: 20%;
+			}
+	
+			input[type="text"],
+			input[type="radio"] {
+				margin: 10px;
+			}
+	
+			button[type="submit"] {
+				background-color: #30A5E1;
+				border: 1px solid #000;
+				font-size: 1.2em;
+				margin: 10px;
+				padding: 10px;
+			}
+	
+			button[type="submit"]:hover {
+				background-color: #2083BD;
+				cursor: pointer;
+			}
+	
+			#resultado {
+				background-color: #262B33;
+				border: 1px solid #000;
+				font-size: 1.2em;
+				margin: 10px;
+				padding: 10px;
+				text-align: center;
+				width: 60%;
+				margin-left: 20%;
+			}
+		</style>
+	</head>
 <body>
 	<h1>Par ou Ímpar dos Crias</h1>
 	<p>Escolha se é Par ou Impar valendo a vida:</p>
@@ -39,17 +108,17 @@
 
 			if (total % 2 === 0) {
 				if (choice1 === 'impar') {
-					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". " + nameplayer2 + " venceu e " + nameplayer1 + " perdeu.";
+					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". <br> " + nameplayer2 + " venceu e " + nameplayer1 + " perdeu.";
 				} else if (choice2 === 'impar') {
-					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". " + nameplayer1 + " venceu e " + nameplayer2 + " perdeu.";
+					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". <br> " + nameplayer1 + " venceu e " + nameplayer2 + " perdeu.";
 				} else {
 					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". Par venceu.";
 				}
 			} else {
 				if (choice1 === 'par') {
-					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". " + nameplayer2 + " venceu e " + nameplayer1 + " perdeu.";
+					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". <br> " + nameplayer2 + " venceu e " + nameplayer1 + " perdeu.";
 				} else if (choice2 === 'par') {
-					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". " + nameplayer1 + " venceu e " + nameplayer2 + " perdeu.";
+					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". <br> " + nameplayer1 + " venceu e " + nameplayer2 + " perdeu.";
 				} else {
 					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". Impar venceu.";
 				}
