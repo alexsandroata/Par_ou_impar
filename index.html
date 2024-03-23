@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Par ou Ímpar dos Crias</title>
+</head>
+<body>
+	<h1>Par ou Ímpar dos Crias</h1>
+	<p>Escolha se é Par ou Impar valendo a vida:</p>
+	<form id="parOuImparForm">
+		<input type="text" id="player1" name="player1" required><br>
+		<label for="par">Par</label>
+		<input type="radio" id="par" name="choice1" value="par" required>
+		<label for="impar">Impar</label>
+		<input type="radio" id="impar" name="choice1" value="impar" required><br>
+		<input type="text" id="player2" name="player2" required><br>
+		<label for="par2">Par</label>
+		<input type="radio" id="par2" name="choice2" value="par" required>
+		<label for="impar2">Impar</label>
+		<input type="radio" id="impar2" name="choice2" value="impar" required><br>
+		<button type="submit">Enviar</button>
+	</form>
+	<div id="resultado"></div>
+
+	<script>
+		document.getElementById('parOuImparForm').addEventListener('submit', function(event) {
+			event.preventDefault();
+
+			var nameplayer1 = document.getElementById('player1').value;
+			var choice1 = document.querySelector('input[name="choice1"]:checked').value;
+
+			var nameplayer2 = document.getElementById('player2').value;
+			var choice2 = document.querySelector('input[name="choice2"]:checked').value;
+
+			var player1 = Math.floor(Math.random() * 10);
+
+			var player2 = Math.floor(Math.random() * 10);
+
+			var total = parseInt(player1) + player2;
+
+			if (total % 2 === 0) {
+				if (choice1 === 'impar') {
+					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". " + nameplayer2 + " venceu e " + nameplayer1 + " perdeu.";
+				} else if (choice2 === 'impar') {
+					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". " + nameplayer1 + " venceu e " + nameplayer2 + " perdeu.";
+				} else {
+					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". Par venceu.";
+				}
+			} else {
+				if (choice1 === 'par') {
+					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". " + nameplayer2 + " venceu e " + nameplayer1 + " perdeu.";
+				} else if (choice2 === 'par') {
+					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". " + nameplayer1 + " venceu e " + nameplayer2 + " perdeu.";
+				} else {
+					document.getElementById('resultado').innerHTML = nameplayer1 + " colocou " + player1 + ". " + nameplayer2 + " colocou " + player2 + ". O total é " + total + ". Impar venceu.";
+				}
+			}
+		});
+	</script>
+</body>
+</html>
